@@ -1,0 +1,51 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.rosehulman.moviequotes.MainActivity">
+
+<!--    <item-->
+<!--        android:id="@+id/action_increase_font"-->
+<!--        android:orderInCategory="50"-->
+<!--        android:title="@string/increase_font_size"-->
+<!--        android:titleCondensed="Font up"-->
+<!--        android:icon="@android:drawable/arrow_up_float"-->
+<!--        app:showAsAction="ifRoom" />-->
+
+<!--    <item-->
+<!--        android:id="@+id/action_decrease_font"-->
+<!--        android:orderInCategory="51"-->
+<!--        android:title="@string/decrease_font_size"-->
+<!--        android:titleCondensed="Font down"-->
+<!--        android:icon="@android:drawable/arrow_down_float"-->
+<!--        app:showAsAction="ifRoom" />-->
+
+    <item
+        android:id="@+id/action_show_favorite_movie"
+        android:orderInCategory="100"
+        android:title="@string/show_favorite_movie"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_show_favorite_quote"
+        android:orderInCategory="100"
+        android:title="@string/show_favorite_quote"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_show_all_quotes"
+        android:orderInCategory="100"
+        android:title="@string/show_all_quotes"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_set_author"
+        android:orderInCategory="100"
+        android:title="@string/set_author"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "612387701733",
+    "firebase_url": "https://boutell-moviequotes-2.firebaseio.com",
+    "project_id": "boutell-moviequotes-2",
+    "storage_bucket": "boutell-moviequotes-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612387701733:android:79de9cbf9a837803",
+        "android_client_info": {
+          "package_name": "edu.rosehulman.boutell.moviequotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612387701733-hcaam13bflj814b91jf4n6ds7kr0o6ac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ5G8mqcL9oLfvXSe5dK2NE8zYEZMnrY0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
