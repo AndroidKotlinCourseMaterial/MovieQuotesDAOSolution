@@ -3,7 +3,7 @@ package edu.rosehulman.moviequotes
 import android.util.Log
 import com.google.firebase.firestore.*
 
-object FirebaseQuotesManager {
+object FirestoreQuotesManager {
     private val movieQuotes = ArrayList<MovieQuote>()
     private lateinit var quotesRef: CollectionReference
     private lateinit var quotesRegistration: ListenerRegistration

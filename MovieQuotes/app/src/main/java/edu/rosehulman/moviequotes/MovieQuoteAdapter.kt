@@ -10,15 +10,15 @@ import kotlinx.android.synthetic.main.dialog_add.view.*
 
 class MovieQuoteAdapter(private val context: Context) :
     RecyclerView.Adapter<MovieQuoteViewHolder>(),
-    FirebaseQuotesManager.Observer
+    FirestoreQuotesManager.Observer
 {
     init {
-        FirebaseQuotesManager.setObserver(this)
-        FirebaseQuotesManager.beginListening()
+        FirestoreQuotesManager.setObserver(this)
+        FirestoreQuotesManager.beginListening()
     }
 
     fun stopListening() {
-        FirebaseQuotesManager.stopListening()
+        FirestoreQuotesManager.stopListening()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieQuoteViewHolder {
@@ -26,10 +26,10 @@ class MovieQuoteAdapter(private val context: Context) :
         return MovieQuoteViewHolder(view, this, context)
     }
 
-    override fun getItemCount() = FirebaseQuotesManager.getNumQuotes()
+    override fun getItemCount() = FirestoreQuotesManager.getNumQuotes()
 
     override fun onBindViewHolder(holder: MovieQuoteViewHolder, position: Int) {
-        val movieQuote = FirebaseQuotesManager.getQuoteAt(position)
+        val movieQuote = FirestoreQuotesManager.getQuoteAt(position)
         holder.bind(movieQuote)
     }
 
@@ -40,7 +40,7 @@ class MovieQuoteAdapter(private val context: Context) :
         val view = LayoutInflater.from(context).inflate(R.layout.dialog_add, null, false)
         builder.setView(view)
         if (position >= 0) {
-            val mq = FirebaseQuotesManager.getQuoteAt(position)
+            val mq = FirestoreQuotesManager.getQuoteAt(position)
             view.quote_edit_text.setText(mq.quote)
             view.movie_edit_text.setText(mq.movie)
         }
@@ -65,18 +65,18 @@ class MovieQuoteAdapter(private val context: Context) :
     }
 
     fun add(movieQuote: MovieQuote) {
-        FirebaseQuotesManager.add(movieQuote)
+        FirestoreQuotesManager.add(movieQuote)
     }
 
     private fun edit(quote: String, movie: String, position: Int) {
-        FirebaseQuotesManager.edit(quote, movie, position)
+        FirestoreQuotesManager.edit(quote, movie, position)
     }
 
     private fun delete(position: Int) {
-        FirebaseQuotesManager.delete(position)
+        FirestoreQuotesManager.delete(position)
     }
 
     fun select(position: Int) {
-        FirebaseQuotesManager.select(position)
+        FirestoreQuotesManager.select(position)
     }
 }
